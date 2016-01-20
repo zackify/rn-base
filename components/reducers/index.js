@@ -1,10 +1,8 @@
-import Immutable from 'immutable'
+import { combineReducers } from 'redux'
+import items from './items'
+import authentication from './authentication'
 
-export default (state = Immutable.List(['Code More!']), action) => {
-  switch(action.type) {
-    case 'addTodo':
-      return state.unshift(action.todo)
-    default:
-      return state
-  }
-}
+export default combineReducers({
+  items,
+  authentication
+})

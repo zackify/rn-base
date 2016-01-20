@@ -9,7 +9,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        {this.props.state.map(text => <Text key={text}>{text}</Text>)}
+        {this.props.items.map(text => <Text key={text}>{text}</Text>)}
         <Text style={styles.instructions} onPress={() => this.props.navigator.push({component: Tester})}>
           To get started, edit index.ios.js
         </Text>

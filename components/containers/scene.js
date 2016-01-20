@@ -3,6 +3,7 @@ import React, {
 } from 'react-native';
 import { connect } from 'react-redux'
 import Index from '../pages/index'
+import Login from '../pages/login'
 
 class Scene extends React.Component {
 
@@ -36,9 +37,11 @@ class Scene extends React.Component {
   }
 
   render() {
+    let component = Login
+    if(this.props.authenticated === true) component = Index
     return (
       <Navigator
-        initialRoute={{component: Index, title: 'Home'}}
+        initialRoute={{component, title: 'Home'}}
         renderScene={this.renderScene}
         onBack={this.onBack}
         configureScene={this.configureScene}
@@ -49,7 +52,8 @@ class Scene extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    state
+    authenticated: state.authentication.get('authenticated'),
+    items: state.items
   }
 }
 
