@@ -19,7 +19,7 @@ export default class Login extends React.Component {
 
   handleLogin() {
     this.props.dispatch(authenticate({ authenticated: true }))
-    this.props.navigator.replace({component: Index})
+    this.props.navigator.replace({component: Index, title: 'Index'})
   }
 
   render() {
@@ -56,11 +56,6 @@ export default class Login extends React.Component {
           <View style={styles.signin}>
             <TouchableOpacity onPress={this.handleLogin}>
               <Text style={[styles.whiteFont,styles.signinText]}>{this.state.message ? this.state.message :'Sign In'}</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.signup}>
-            <TouchableOpacity>
-              <Text style={styles.greyFont}>Don't have an account?<Text style={styles.whiteFont}>Sign Up</Text></Text>
             </TouchableOpacity>
           </View>
         </View>

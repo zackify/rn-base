@@ -2,11 +2,11 @@ import React, {
   Navigator
 } from 'react-native';
 import { connect } from 'react-redux'
-import Index from '../pages/index'
-import Login from '../pages/login'
+import Index from '../../pages/index'
+import Login from '../../pages/login'
+import Navbar from '../../shared/navbar'
 
 class Scene extends React.Component {
-
   constructor(){
     super()
     this.onBack = this.onBack.bind(this)
@@ -37,11 +37,13 @@ class Scene extends React.Component {
   }
 
   render() {
-    let component = Login
-    if(this.props.authenticated === true) component = Index
+    let initialRoute = { component: Login, title: 'Login'}
+    if(this.props.authenticated === true) initialRoute = { component: Index, title: 'Index'}
+
     return (
       <Navigator
-        initialRoute={{component, title: 'Home'}}
+        initialRoute={initialRoute}
+        navigationBar={<Navbar />}
         renderScene={this.renderScene}
         onBack={this.onBack}
         configureScene={this.configureScene}

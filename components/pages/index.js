@@ -1,19 +1,21 @@
 import React, {
   StyleSheet,
   Text,
-  View
+  View,
+  Navigator
 } from 'react-native';
 import Tester from './test'
+import Camera from '../containers/nested/scene'
 
 export default class Index extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         {this.props.items.map(text => <Text key={text}>{text}</Text>)}
-        <Text style={styles.instructions} onPress={() => this.props.navigator.push({component: Tester})}>
+        <Text style={styles.instructions} onPress={() => this.props.navigator.push({component: Tester, title: 'Testerrr'})}>
           To get started, edit index.ios.js
         </Text>
-        <Text style={styles.instructions}>
+        <Text style={styles.instructions} onPress={() => this.props.navigator.push({component: Camera, title: 'Camera', sceneConfig: Navigator.SceneConfigs.FloatFromBottom})}>
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
