@@ -6,7 +6,7 @@ import React, {
   TouchableOpacity,
   Image,
 } from 'react-native'
-import { authenticate } from '../../actions'
+import { authenticate } from '../../../actions'
 import Index from '../index'
 
 export default class Login extends React.Component {
@@ -25,13 +25,13 @@ export default class Login extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-          <Image style={styles.bg} source={require('../../../images/background.jpg')} />
+          <Image style={styles.bg} source={require('../../../../images/background.jpg')} />
           <View style={styles.header}>
-            <Image style={styles.mark} source={require('../../../images/logo.png')} />
+            <Image style={styles.mark} source={require('../../../../images/logo.png')} />
           </View>
           <View style={styles.inputs}>
             <View style={styles.inputContainer}>
-                <Image style={styles.inputUsername} source={require('../../../images/username.png')}/>
+                <Image style={styles.inputUsername} source={require('../../../../images/username.png')}/>
                 <TextInput
                   style={[styles.input, styles.whiteFont]}
                   onChangeText={email => this.setState({email})}
@@ -41,7 +41,7 @@ export default class Login extends React.Component {
                 />
               </View>
               <View style={styles.inputContainer}>
-                <Image style={styles.inputPassword} source={require('../../../images/password.png')}/>
+                <Image style={styles.inputPassword} source={require('../../../../images/password.png')}/>
                 <TextInput
                 style={[styles.input, styles.whiteFont]}
                   onChangeText={password => this.setState({password})}

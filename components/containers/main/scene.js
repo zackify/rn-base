@@ -2,9 +2,9 @@ import React, {
   Navigator
 } from 'react-native';
 import { connect } from 'react-redux'
-import Index from '../../pages/index'
-import Login from '../../pages/login'
-import Navbar from '../../shared/navbar'
+import Index from '../../pages/main/index'
+import Login from '../../pages/main/login'
+import Navbar from './navbar'
 
 class Scene extends React.Component {
   constructor(){

@@ -2,9 +2,8 @@ import React, {
   Navigator
 } from 'react-native';
 import { connect } from 'react-redux'
-import Index from '../../pages/index'
-import Login from '../../pages/login'
-import Navbar from '../../shared/navbar'
+import Login from '../../pages/main/login'
+import Navbar from '../main/navbar'
 
 class CameraScene extends React.Component {
 
@@ -38,10 +37,9 @@ class CameraScene extends React.Component {
   }
 
   render() {
-    let component = Login
     return (
       <Navigator
-        initialRoute={{component, title: 'Camera'}}
+        initialRoute={{component: Login, title: 'Camera'}}
         navigationBar={<Navbar nested={true} />}
         renderScene={this.renderScene}
         onBack={this.onBack}

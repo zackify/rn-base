@@ -5,7 +5,7 @@ import React, {
   Navigator
 } from 'react-native';
 import Tester from './test'
-import Camera from '../containers/nested/scene'
+import Camera from '../../containers/camera/scene'
 
 export default class Index extends React.Component {
   render() {

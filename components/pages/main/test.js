@@ -3,9 +3,8 @@ import React, {
   Text,
   View
 } from 'react-native';
-import Test from './test'
 
-export default class Tester extends React.Component {
+export default class Test extends React.Component {
   render() {
     return (
       <View style={styles.container}>
