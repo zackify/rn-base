@@ -37,6 +37,7 @@ class Scene extends React.Component {
   }
 
   render() {
+    console.log(this.props.authenticated,'AUTH')
     let initialRoute = { component: Login, title: 'Login'}
     if(this.props.authenticated === true) initialRoute = { component: Index, title: 'Index'}
 

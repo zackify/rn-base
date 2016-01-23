@@ -1,16 +1,14 @@
 import React from 'react-native'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
 import Scene from './scene'
-import reducers from '../../reducers'
-const store = createStore(reducers)
+import store from '../../reducers'
+import { RestoreProvider } from 'redux-restore'
 
 export default class App extends React.Component {
   render() {
     return (
-      <Provider store={store}>
+      <RestoreProvider store={store}>
         <Scene />
-      </Provider>
+      </RestoreProvider>
     );
   }
 }

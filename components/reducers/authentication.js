@@ -1,9 +1,14 @@
 import Immutable from 'immutable'
-import match from 'rust-match'
 
 export default (state = Immutable.Map({ authenticated: false }), action) => {
-  return match(action.type, {
-    authenticate: () => state.merge(action),
-    _: () => state
-  })
+  console.log(action)
+  switch (action.type) {
+    case 'authentication':
+      delete action.type
+      return Immutable.Map(action)
+    case 'authenticate':
+      return state.set('authenticated', action.authenticated)
+    default:
+      return state
+  }
 }
