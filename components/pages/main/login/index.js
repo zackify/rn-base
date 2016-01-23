@@ -101,14 +101,13 @@ var styles = StyleSheet.create({
       flex: .15
     },
     inputs: {
-        marginTop: -40,
         marginBottom: 10,
         flex: .25
     },
     inputPassword: {
         marginLeft: 15,
         width: 20,
-        height: 21
+        height: 20
     },
     inputUsername: {
       marginLeft: 15,
@@ -124,9 +123,9 @@ var styles = StyleSheet.create({
     input: {
         position: 'absolute',
         left: 61,
-        top: 12,
+        top: 0,
         right: 0,
-        height: 20,
+        height: 50,
         fontSize: 14
     },
     forgotContainer: {

@@ -1,6 +1,6 @@
 import React from 'react-native'
-import Scene from './scene'
-import store from '../../reducers'
+import Scene from './main/scene'
+import store from '../reducers'
 import { RestoreProvider } from 'redux-restore'
 
 export default class App extends React.Component {
