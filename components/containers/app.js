@@ -1,5 +1,5 @@
 import React from 'react-native'
-import Scene from './main/scene'
+import Scene from './root/scene'
 import store from '../reducers'
 import { RestoreProvider } from 'redux-restore'
 

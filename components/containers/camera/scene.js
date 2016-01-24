@@ -2,8 +2,8 @@ import React, {
   Navigator
 } from 'react-native';
 import { connect } from 'react-redux'
-import Login from '../../pages/main/login'
-import Navbar from '../main/navbar'
+import Login from '../../sections/main/login' //should be something in the camera section
+import Navbar from '../root/navbar'
 
 class CameraScene extends React.Component {
 
