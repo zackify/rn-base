@@ -15,7 +15,7 @@ export default class Index extends React.Component {
         <Text style={styles.instructions} onPress={() => this.props.navigator.push({component: Tester, title: 'Testerrr'})}>
           To get started, edit index.ios.js
         </Text>
-        <Text style={styles.instructions} onPress={() => this.props.navigator.push({component: Camera, title: 'Camera', sceneConfig: Navigator.SceneConfigs.FloatFromBottom})}>
+        <Text style={styles.instructions} onPress={() => this.props.navigator.push({component: Camera, title: 'Camera', sceneConfig: Navigator.SceneConfigs.VerticalUpSwipeJump})}>
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>

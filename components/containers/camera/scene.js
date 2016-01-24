@@ -24,7 +24,7 @@ class CameraScene extends React.Component {
     if (route.sceneConfig) {
       return route.sceneConfig;
     }
-    return Navigator.SceneConfigs.FloatFromBottom;
+    return Navigator.SceneConfigs.FloatFromRight;
   }
 
   renderScene(route, navigator) {
