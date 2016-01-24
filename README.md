@@ -11,7 +11,7 @@ In the components folder there are four folders. Each of them are described belo
 
 Contains all [redux](http://redux.js.org/) actions
 
-##Reducers
+###Reducers
 
 This contains all of the [redux](http://redux.js.org/) reducers required for your app.
 
