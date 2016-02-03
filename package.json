@@ -7,10 +7,9 @@
   },
   "dependencies": {
     "immutable": "^3.7.6",
-    "react-native": "^0.18.0",
+    "react-native": "^0.19.0",
     "react-redux": "^4.0.6",
     "redux": "^3.0.5",
-    "redux-restore": "^0.1.6",
-    "rust-match": "^0.1.7"
+    "redux-restore": "^0.1.6"
   }
 }
